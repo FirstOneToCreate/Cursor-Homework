@@ -74,3 +74,31 @@ goldfish.swim()
 
 monkey = Monkey("Julio", 5, "mammal")
 monkey.jump()
+
+
+class Human:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+    def sleep(self):
+        print(f"{self.name} is sleeping.")
+
+    def study(self):
+        print(f"{self.name} is studying.")
+
+    def work(self):
+        print(f"{self.name} is working.")
+
+
+class Centaur(Animal, Human):
+    def hunt(self):
+        print(f"{self.name} the Centaur is hunting.")
+
+
+centaur = Centaur("Osvald", 34, "mythical creature")
+centaur.eat()
+centaur.hunt()
