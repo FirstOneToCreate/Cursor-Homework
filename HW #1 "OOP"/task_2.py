@@ -14,8 +14,16 @@ class Profile:
         self.sex = sex
 
     def __str__(self):
-        return f"Name: {self.name}\nLast Name: {self.last_name}\nPhone Number: {self.phone_number}\nAddress: {self.address}\nEmail: {self.email}\nBirthday: {self.birthday}\nAge: {self.age}\nSex: {self.sex}"
+        return "\n".join([f"Name: {self.name}",
+                          f"Last Name: {self.last_name}",
+                          f"Phone Number: {self.phone_number}",
+                          f"Address: {self.address}",
+                          f"Email: {self.email}",
+                          f"Birthday: {self.birthday}",
+                          f"Age: {self.age}",
+                          f"Sex: {self.sex}"])
 
 
-profile = Profile("Volodymyr", "Volkov", "+380939548891", "Lviv, Ukraine", "v.volko@gmail.com", "10.10.2001", "21", "male")
+profile = Profile("Volodymyr", "Volkov", "+380939548891", "Lviv, Ukraine", "v.volko@gmail.com", "10.10.2001", "21",
+                  "male")
 print(profile)
